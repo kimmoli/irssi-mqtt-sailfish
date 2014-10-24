@@ -34,6 +34,8 @@ mkdir -p  %{buildroot}
 
 # in builddir
 cp -a * %{buildroot}
+rm %{buildroot}/LICENSE
+rm %{buildroot}/README.md
 
 
 %clean
