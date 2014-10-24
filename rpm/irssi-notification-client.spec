@@ -1,6 +1,5 @@
 #
 # irssi-notification-client
-# (C) kimmoli 2014
 #
 
 %define        __spec_install_post %{nil}
@@ -9,8 +8,8 @@
 
 Summary: irssi mqtt push notification client
 Name: irssi-notification-client
-Version: 1.0
-Release: 1
+Version: 1.0.2
+Release: 2
 License: LICENSE
 Group: Utilities
 Source0:    %{name}-%{version}.tar.bz2
@@ -72,9 +71,3 @@ if [ "$1" = "0" ]; then
   systemctl-user stop %{name}.service
   systemctl-user disable %{name}.service
 fi
-
-
-%changelog
-* Mon Oct 24 2014  kimmoli <kimmo.lindholm@eke.fi> 1.0-1
-- Packaged for obs
-
