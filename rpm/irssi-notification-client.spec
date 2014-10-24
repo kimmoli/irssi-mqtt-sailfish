@@ -13,7 +13,7 @@ Version: 1.0
 Release: 1
 License: LICENSE
 Group: Utilities
-SOURCE0 : %{name}-%{version}.tar.gz
+Source0:    %{name}-%{version}.tar.bz2
 BuildArch:  noarch
 URL: https://wiki.merproject.org/wiki/Middleware/PushNotifications
 
