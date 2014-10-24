@@ -64,6 +64,9 @@ def on_message(mosq, obj, msg):
     except dbus.exceptions.DBusException:
         print("Failed sending DBus notification.")
 
+	if "itsme"+mqtt_password[-3:] in notification[1]:
+	    os.system("gst-launch-0.10 filesrc location=/usr/share/irssi-notification-client/itsme.wav ! wavparse ! audioconvert ! alsasink")
+
 mqttc.on_message = on_message
 
 bus = dbus.SessionBus()

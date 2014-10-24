@@ -51,6 +51,7 @@ rm -rf %{buildroot}
 /usr/share/%{name}/%{name}.py
 /usr/share/%{name}/LICENSE
 /usr/share/%{name}/README.md
+/usr/share/%{name}/itsme.wav
 /usr/share/%{name}
 
 %post
