@@ -16,6 +16,9 @@ Group: Utilities
 Source0:    %{name}-%{version}.tar.bz2
 BuildArch:  noarch
 URL: https://wiki.merproject.org/wiki/Middleware/PushNotifications
+Requires: python
+Requires: python-mosquitto
+Requires: dbus-python
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
@@ -34,8 +37,8 @@ mkdir -p  %{buildroot}
 
 # in builddir
 cp -a * %{buildroot}
-rm %{buildroot}/LICENSE
-rm %{buildroot}/README.md
+mv %{buildroot}/LICENSE %{buildroot}/usr/share/%{name}/
+mv %{buildroot}/README.md %{buildroot}/usr/share/%{name}/
 
 
 %clean
@@ -47,6 +50,8 @@ rm -rf %{buildroot}
 %config /etc/systemd/user/%{name}.service
 %config /usr/share/lipstick/notificationcategories/x-nemo.messaging.irssi.conf
 /usr/share/%{name}/%{name}.py
+/usr/share/%{name}/LICENSE
+/usr/share/%{name}/README.md
 /usr/share/%{name}
 
 %post
