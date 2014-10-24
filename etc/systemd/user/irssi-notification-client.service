@@ -1,0 +1,9 @@
+[Unit]
+Description=irssi mqtt push notification client
+After=user-session.target
+
+[Service]
+ExecStart=/usr/bin/python /usr/share/irssi-notification-client/irssi-notification-client.py
+
+[Install]
+WantedBy=post-user-session.target
