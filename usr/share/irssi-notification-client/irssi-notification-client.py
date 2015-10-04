@@ -52,7 +52,7 @@ def on_message(mosq, obj, msg):
     try:
         interface.Notify("irssi",
                  0,
-                 "icon-m-notifications",
+                 "",
                  notification[0],
                  notification[1],
                  dbus.Array(["default", ""]),
